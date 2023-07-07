@@ -23,18 +23,18 @@ const openai = new OpenAIApi(configuration);
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
   
-  switch (null) {
-    case message.channel.id !== process.env.CHANNEL_ID:
-        return
-        break;
-    case message.channel.id !== process.env.CHANNEL_ID_1:
-        return
-        break;
-    default:
-        break;
-  }
+//   switch (null) {
+//     case message.channel.id !== process.env.CHANNEL_ID:
+//         return
+//         break;
+//     case message.channel.id !== process.env.CHANNEL_ID_1:
+//         return
+//         break;
+//     default:
+//         break;
+//   }
 
-  if (message.content.startsWith('?')) {
+  if (message.content.startsWith('@GPT')) {
 
         let conversationLog = [
             { role: 'system', content: 'You are a friendly chatbot.' },
