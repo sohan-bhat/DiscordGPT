@@ -22,8 +22,18 @@ const openai = new OpenAIApi(configuration);
 
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
-  if (message.channel.id !== process.env.CHANNEL_ID) return;
-  if (message.channel.id !== process.env.CHANNEL_ID_1) return;
+  
+  switch (null) {
+    case message.channel.id !== process.env.CHANNEL_ID:
+        return
+        break;
+    case message.channel.id !== process.env.CHANNEL_ID_1:
+        return
+        break;
+    default:
+        break;
+  }
+
   if (message.content.startsWith('?')) {
 
         let conversationLog = [
