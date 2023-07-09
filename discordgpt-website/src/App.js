@@ -9,6 +9,8 @@ class App extends Component {
 
   render() { 
     return (
+      <h1>DISCORD-GPT</h1>
+      <p>Introducing Discord GPT, A GPT 3.5 turbo powered Chatbot that responds to @GPT</p>
       <div>
         <button onClick={this.handleClick}>Click to connect this bot to server!</button>
       </div>
